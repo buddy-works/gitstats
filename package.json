@@ -1,6 +1,6 @@
 {
   "name": "buddygitstats",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Command line tool for git statistics",
   "keywords": [
     "git",
@@ -8,7 +8,7 @@
     "statistic"
   ],
   "bin": {
-    "buddy-cli": "bin/gitstats.js"
+    "buddygitstats": "bin/gitstats.js"
   },
   "preferGlobal": true,
   "scripts": {
