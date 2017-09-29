@@ -1,0 +1,9 @@
+extends: airbnb-base
+plugins:
+  - import
+env:
+    node: true
+    mocha: true
+rules:
+    no-console: 0
+    consistent-return: ["error", { "treatUndefinedAsUnspecified": true }]
