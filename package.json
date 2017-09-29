@@ -1,5 +1,5 @@
 {
-  "name": "gitstats",
+  "name": "buddygitstats",
   "version": "1.0.0",
   "description": "Command line tool for git statistics",
   "keywords": [
