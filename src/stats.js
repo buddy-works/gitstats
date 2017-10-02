@@ -58,15 +58,12 @@ const commit2stats = (commit) => {
 };
 
 module.exports = (repo) => {
-  repo.fetchAll()
-  .then(() => {
-    repo.getHeadCommit()
-    .then((headCommit) => {
-      const history = headCommit.history(nodegit.Revwalk.SORT.TIME);
-      history.on('commit', commit2stats);
-      history.on('error', output.error);
-      history.on('end', render);
-      history.start();
-    }, output.error);
+  repo.getHeadCommit()
+  .then((headCommit) => {
+    const history = headCommit.history(nodegit.Revwalk.SORT.TIME);
+    history.on('commit', commit2stats);
+    history.on('error', output.error);
+    history.on('end', render);
+    history.start();
   }, output.error);
 };
